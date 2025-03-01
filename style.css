@@ -16,7 +16,7 @@ h1 {
     margin-bottom: 10px;
     text-align: center;
 }
-.container {  
+#container {  
     margin-top: 50px;
     justify-content: center;
     width: 700px;
@@ -34,7 +34,7 @@ h1 {
    right: 370.5px;
     /* margin-right: 20%; */
 }
-#todo-input {
+#todoInput {
     box-sizing: border-box;
     padding: 12px 20px;
     background-color: black;
@@ -63,15 +63,20 @@ h1 {
     margin-bottom: 10px;
     border-radius: 15px;
     background-color: #1C1D20;
-    /* width: max-content; */
+    width: auto
    
 }
 
 
 .todo .todo-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 10px;
+    width: auto;
+    /* padding: 10px;
     padding-right: 0;
-    flex-grow: 1;
+    flex-grow: 1; */
 }
 .delete-button {
     background: none;
@@ -115,7 +120,37 @@ input[type='checkbox']:checked ~ .todo-text {
 }
 
 /* responsiveness */
-@media (max-width: 500px) {
+@media (max-width: 400px) {
+    html {
+        font-size: 10pt;
+        overflow-x: hidden;
+    }
+    #container {
+        width: 400px;
+        align-items: center;
+    }
+    #todo-input {
+        width: 340px;
+        
+        margin-top: 15px;
+        margin-left: 30px;
+    }
+    #addButton {
+        position: fixed;
+        right: 26px;
+        margin-top: 10px;
+        padding: 15px;
+        bottom: 78.5%;
+        height: auto;
+    }
+
+    .todo  {
+        margin-right: 25px;
+        padding: 0px 0px 15px 15px;
+    }
+
+}
+ @media (min-width: 400) {
     html {
         font-size: 12pt;
         overflow-x: hidden;
@@ -125,14 +160,24 @@ input[type='checkbox']:checked ~ .todo-text {
         align-items: center;
     }
     #todo-input {
-        width: 300px;
+        width: 350px;
+        margin-top: 15px;
+        margin-left: 30px;
     }
-    .add-button {
-        position: unset;
-        padding: 15px;
+    #addButton {
+        position: absolute;
+        right: 20px;
         margin-top: 10px;
-        width: 100%;
+        padding: 14px;
+        /* bottom: 78%; */
         height: auto;
     }
-}
+
+    .todo  {
+        margin-right: 25px;
+        padding: 0px 0px 15px 15px;
+    }
+} 
+
+
    
